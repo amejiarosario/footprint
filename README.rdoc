@@ -5,4 +5,4 @@ This app to ...
 
 == Demo
 
-{http://footnote-2012.herokuapp.com/}[http://footnote-2012.herokuapp.com/]
+{http://footprint-2012.herokuapp.com/}[http://footprint-2012.herokuapp.com/]

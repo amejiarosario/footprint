@@ -67,5 +67,14 @@ module Footprint
     
     # If you are deploying Rails 3.1 on Heroku, you may want to set
     config.assets.initialize_on_precompile = false
+
+    ActionMailer::Base.smtp_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 587,
+        :user_name            => ENV['GMAIL_USERNAME'],
+        :password             => ENV['GMAIL_PASSWORD'],
+        :authentication       => "plain",
+        :enable_starttls_auto => true
+    }
   end
 end

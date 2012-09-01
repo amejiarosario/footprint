@@ -47,7 +47,7 @@
           <a class="brand" href="#">Footprint</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Wall", "/walls"  %></li>
+              <li><%= link_to "Wall", posts_path  %></li>
             </ul>
             <% if user_signed_in? %>
 	            <ul class="nav pull-right">
@@ -70,30 +70,33 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav">
+          <!--<div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%#= link_to "Link1", "/path1"  %></li>
+              <li><%#= link_to "Link2", "/path2"  %></li>
+              <li><%#= link_to "Link3", "/path3"  %></li>
             </ul>
-          </div><!--/.well -->
+          </div>--><!--/.well -->
         </div><!--/span-->
         <div class="span9">
 					<% unless flash[:notice].blank? %>
-					  <div class="alert-block info">
+					  <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert">×</button>
 					    <%= content_tag :div, flash[:notice] %>
 					  </div>
 					<% end %>
 
 					<% unless flash[:error].blank? %>
-					  <div class="alert-block error">
+					  <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">×</button>
 					    <%= content_tag :div, flash[:error] %>
 					  </div>
 					<% end %>
 
 					<% unless flash[:alert].blank? %>
-					  <div class="alert-block warning">
+					  <div class="alert alert-warning">
+              <button type="button" class="close" data-dismiss="alert">×</button>
 					    <%= content_tag :div, flash[:alert] %>
 					  </div>
 					<% end %>
@@ -103,7 +106,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Footprint 2012</p>
       </footer>
 
     </div> <!-- /container -->

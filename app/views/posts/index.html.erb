@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
   <div class="hero-unit">
-    <p><%= post.content %></p>
+    <p><%=raw embedded_links_to_live(post.content) %></p>
     <span class="badge badge-info pull-right"><%= time_ago_in_words(post.updated_at) %> ago</span>
     <span class="badge pull-right">by <%= post.user.email %></span>
   </div>

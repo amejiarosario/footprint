@@ -46,6 +46,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem "twitter-bootstrap-rails", '=2.1.0', :group => :assets
 gem 'rails-footnotes', '>= 3.7.5.rc4', :group => :development
+gem 'rinku', :require => 'rails_rinku'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
